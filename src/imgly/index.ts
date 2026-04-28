@@ -126,5 +126,4 @@ export async function initCutoutLinesEditor(cesdk: CreativeEditorSDK) {
   // - Canvas menu: Right-click on shapes to create cutout lines
   // - Dock: Cutout library panel for managing saved cutouts
   await setupCutoutLibraryPlugin(cesdk);
-
 }
