@@ -19,11 +19,10 @@ import { resolveAssetPath } from './imgly/resolveAssetPath';
 const config = {
   userId: 'starterkit-cutout-lines-editor-user',
 
-  // IMG.LY CDN
-  baseURL: `https://cdn.img.ly/packages/imgly/cesdk-js/${CreativeEditorSDK.version}/assets`
+  // IMG.LY CDN (for quick testing only, NOT recommended for production)
 
-  // License key (required for production)
-  // license: 'YOUR_LICENSE_KEY',
+  // Local assets for development
+
 };
 
 // ============================================================================
@@ -41,8 +40,8 @@ CreativeEditorSDK.create('#cesdk_container', config)
     // Scene Loading
     // ============================================================================
 
-    // Load the cutout lines demo scene from the public showcases URL
-    // This scene contains pre-made shapes ready for cutout line creation
+    // Load the cutout lines demo scene.
+    // This scene contains pre-made shapes ready for cutout line creation.
     await cesdk.loadFromURL(resolveAssetPath('/assets/example.scene'));
   })
   .catch((error) => {
