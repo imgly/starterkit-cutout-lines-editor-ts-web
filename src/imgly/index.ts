@@ -8,10 +8,11 @@
  * @see https://img.ly/docs/cesdk/js/plugins/cutout-library/
  */
 
-import CreativeEditorSDK from '@cesdk/cesdk-js';
+import type CreativeEditorSDK from '@cesdk/cesdk-js';
 
 import {
   BlurAssetSource,
+  ImageColorsAssetSource,
   ColorPaletteAssetSource,
   CropPresetsAssetSource,
   DemoAssetSources,
@@ -72,6 +73,7 @@ export async function initCutoutLinesEditor(cesdk: CreativeEditorSDK) {
   // ============================================================================
 
   // Color palettes for design
+  await cesdk.addPlugin(new ImageColorsAssetSource());
   await cesdk.addPlugin(new ColorPaletteAssetSource());
 
   // Typeface/font assets
