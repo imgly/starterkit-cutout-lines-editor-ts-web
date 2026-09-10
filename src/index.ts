@@ -12,6 +12,7 @@ import CreativeEditorSDK from '@cesdk/cesdk-js';
 import { initCutoutLinesEditor } from './imgly';
 import { resolveAssetPath } from './imgly/resolveAssetPath';
 
+
 // ============================================================================
 // Configuration
 // ============================================================================
